@@ -1,14 +1,21 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:game/Screens/Drawer_Screens/game_rate.dart';
+import 'package:game/Screens/Drawer_Screens/generate_mpin.dart';
+import 'package:game/Screens/Drawer_Screens/how_to_play.dart';
+import 'package:game/Screens/Drawer_Screens/rules.dart';
 import 'package:game/Screens/config.dart';
 import 'package:game/Screens/history.dart';
+import 'package:game/Screens/Drawer_Screens/myProfile.dart';
 import 'package:game/Screens/wallet/wallet.dart';
 // import 'package:game/Screens/login.dart';
 // import 'package:game/Screens/registration.dart';
 import 'package:game/firstScreen.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
+
+import 'Drawer_Screens/settings.dart';
 
 class MainScreen extends StatefulWidget {
   int balance;
@@ -49,7 +56,9 @@ class _MainScreenState extends State<MainScreen> {
         SizedBox(height: 30),
 
         ListTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>MyProfile()));
+            },
             tileColor: color_1,
             contentPadding:
                 EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
@@ -72,7 +81,9 @@ class _MainScreenState extends State<MainScreen> {
           height: 2,
         ),
         ListTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>GenerateMPIN()));
+            },
             tileColor: color_1,
             contentPadding:
                 EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
@@ -95,7 +106,9 @@ class _MainScreenState extends State<MainScreen> {
           height: 2,
         ),
         ListTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Setting()));
+            },
             tileColor: color_1,
             contentPadding:
                 EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
@@ -119,11 +132,7 @@ class _MainScreenState extends State<MainScreen> {
         ),
         ListTile(
             onTap: () {
-              // Navigator.push(context, MaterialPageRoute(
-              //                   builder: (context) {
-              //                     return Login();
-              //                   },
-              //                 ));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HowToPlay()));
             },
             selectedTileColor: Colors.lightGreenAccent,
             tileColor: color_1,
@@ -148,7 +157,9 @@ class _MainScreenState extends State<MainScreen> {
           height: 2,
         ),
         ListTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>GameRate()));
+            },
             tileColor: color_1,
             contentPadding:
                 EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
@@ -171,7 +182,9 @@ class _MainScreenState extends State<MainScreen> {
           height: 2,
         ),
         ListTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Rules()));
+            },
             tileColor: color_1,
             contentPadding:
                 EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
@@ -204,7 +217,7 @@ class _MainScreenState extends State<MainScreen> {
                   border: new Border(
                       right:
                           new BorderSide(width: 1.0, color: Colors.white24))),
-              child: Icon(Icons.logout_outlined, color: Colors.white),
+              child: Icon(Icons.login_outlined, color: Colors.white),
             ),
             title: Text(
               "Logout",
@@ -223,7 +236,7 @@ class _MainScreenState extends State<MainScreen> {
         title: const Text('VR ONLINE'),
         actions: [
           Padding(
-            padding: EdgeInsets.only(bottom: 3, top: 3, right: 3),
+            padding: EdgeInsets.only(bottom: 7, top: 7, right: 2),
             child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
@@ -232,7 +245,7 @@ class _MainScreenState extends State<MainScreen> {
                 child: Row(
                   children: <Widget>[
                     SizedBox(
-                      width: 15,
+                      width: 10,
                     ),
                     Text(
                       widget.balance.toString() + ' ₹',
@@ -241,9 +254,7 @@ class _MainScreenState extends State<MainScreen> {
                         color: Colors.black,
                       ),
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
+
                     IconButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(
@@ -259,7 +270,12 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                   ],
                 )),
+          ),
+          Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: IconButton(icon: Icon(Icons.notifications),onPressed: (){},)
           )
+
         ],
       ),
       body: Center(

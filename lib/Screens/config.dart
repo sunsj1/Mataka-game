@@ -5,6 +5,8 @@ Color color1 = Color(0xFFE25289);
 Color color2 = Color(0xFF692D8B);
 Color color3 = Color(0xFF4487EB);
 Color color4 = Color(0xFF0D794F);
+
+
 Color color_1=Color(0xFF0287E0);
 Color color_2=Color(0xFFFFFFFF);
 Color color_3=Color(0xFFF30000);
