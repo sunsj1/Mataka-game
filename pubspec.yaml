@@ -56,6 +56,9 @@ flutter:
   assets:
     - assets/images/icon.jpg
     - assets/images/mataka.png
+    - assets/images/poker-cards.png
+    - assets/images/dice.png
+    - assets/images/patti.png
     # - images/a_dot_burr.jpeg
     # - images/a_dot_ham.jpeg
 

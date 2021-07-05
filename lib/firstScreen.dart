@@ -87,25 +87,7 @@ class FirstScreen extends StatelessWidget {
           ],
         ),
       ),
-      Container(
-        child: SingleChildScrollView(
-          child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 4.0,
-                  mainAxisSpacing: 4.0),
-              itemBuilder: (BuildContext context, int index) {
-                return Container(
-                  width: 100,
-                  height: 100,
-                  color: color_1,
-                  child: Center(
-                    child: Text('Suraj'),
-                  ),
-                );
-              }),
-        ),
-      )
+      
     ]));
   }
 }
