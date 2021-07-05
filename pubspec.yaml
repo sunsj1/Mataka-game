@@ -56,9 +56,12 @@ flutter:
   assets:
     - assets/images/icon.jpg
     - assets/images/mataka.png
-    - assets/images/poker-cards.png
-    - assets/images/dice.png
-    - assets/images/patti.png
+    - assets/images/phonepe.png
+    - assets/images/location.png
+    - assets/images/bank.png
+    - assets/images/paytm.png
+    - assets/images/gpay.png
+    - assets/images/mpin.png
     # - images/a_dot_burr.jpeg
     # - images/a_dot_ham.jpeg
 
